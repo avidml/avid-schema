@@ -1,0 +1,157 @@
+{
+  "namespace": "injectlab-llm-attck",
+  "description": "A structured taxonomy for Large Language Model (LLM) adversarial threats, including prompt injection, role override, execution hijack, information disclosure, output manipulation, and multi-agent exploitation, derived from the InjectLab project.",
+  "refs": [
+    "https://github.com/ahow2004/injectlab"
+  ],
+  "version": 1,
+  "predicates": [
+    {
+      "value": "technique",
+      "expanded": "Technique",
+      "description": "Specific adversarial methods used against LLM systems."
+    },
+    {
+      "value": "category",
+      "expanded": "Category",
+      "description": "The broader classification of adversarial behavior."
+    }
+  ],
+  "values": [
+    {
+      "predicate": "category",
+      "entry": [
+        {
+          "value": "prompt-injection",
+          "expanded": "Prompt Injection",
+          "description": "Injection of malicious input into the prompt to alter model behavior."
+        },
+        {
+          "value": "role-override",
+          "expanded": "Role/Instruction Override",
+          "description": "Manipulation of system instructions or roles assigned to the model."
+        },
+        {
+          "value": "execution-hijack",
+          "expanded": "Execution Hijack",
+          "description": "Abuse of plugins or task flows to redirect model actions."
+        },
+        {
+          "value": "information-disclosure",
+          "expanded": "Information Disclosure",
+          "description": "Exposing unintended information through prompt or memory leaks."
+        },
+        {
+          "value": "output-manipulation",
+          "expanded": "Output Manipulation",
+          "description": "Altering the model's output to influence emotions, biases, or censorship."
+        },
+        {
+          "value": "multi-agent-exploitation",
+          "expanded": "Multi-agent Exploitation",
+          "description": "Compromising interactions between multiple AI agents."
+        }
+      ]
+    },
+    {
+      "predicate": "technique",
+      "entry": [
+        {
+          "value": "pi-t001",
+          "expanded": "Direct Prompt Injection",
+          "description": "Directly inserting malicious instructions into a model's prompt."
+        },
+        {
+          "value": "pi-t002",
+          "expanded": "Indirect Context Injection",
+          "description": "Injecting malicious input indirectly through context manipulation."
+        },
+        {
+          "value": "pi-t003",
+          "expanded": "Obfuscated Prompt Injection",
+          "description": "Using hidden or disguised injections to bypass prompt defenses."
+        },
+        {
+          "value": "pi-t004",
+          "expanded": "Prompt Leakage via Summaries",
+          "description": "Exposing sensitive prompts through model-generated summaries."
+        },
+        {
+          "value": "ro-t001",
+          "expanded": "Identity Swap",
+          "description": "Changing the perceived identity of the model or user through input manipulation."
+        },
+        {
+          "value": "ro-t002",
+          "expanded": "System Prompt Manipulation",
+          "description": "Altering the base instructions guiding a model's behavior."
+        },
+        {
+          "value": "ro-t003",
+          "expanded": "Jailbreak Template Injection",
+          "description": "Embedding jailbreak instructions within prompt templates."
+        },
+        {
+          "value": "eh-t001",
+          "expanded": "Plugin Abuse",
+          "description": "Exploiting third-party plugins to perform unauthorized actions."
+        },
+        {
+          "value": "eh-t002",
+          "expanded": "Task Loop Injection",
+          "description": "Forcing a model to repeatedly perform tasks beyond intended scope."
+        },
+        {
+          "value": "eh-t003",
+          "expanded": "Redirected Intent",
+          "description": "Hijacking execution flows to achieve adversarial goals."
+        },
+        {
+          "value": "id-t001",
+          "expanded": "System Prompt Leak",
+          "description": "Leaking the system-level instructions to unauthorized users."
+        },
+        {
+          "value": "id-t002",
+          "expanded": "Memory Spill",
+          "description": "Unintended exposure of memory contents or prior interactions."
+        },
+        {
+          "value": "id-t003",
+          "expanded": "Configuration Disclosure",
+          "description": "Revealing internal system settings or operational configurations."
+        },
+        {
+          "value": "om-t001",
+          "expanded": "Emotion Steering",
+          "description": "Manipulating emotional tone or bias of model responses."
+        },
+        {
+          "value": "om-t002",
+          "expanded": "Censorship Bypass",
+          "description": "Forcing the model to produce restricted or censored outputs."
+        },
+        {
+          "value": "om-t003",
+          "expanded": "Bias Injection",
+          "description": "Embedding bias or misinformation through adversarial prompts."
+        },
+        {
+          "value": "ma-t001",
+          "expanded": "Cross-Agent Prompt Poisoning",
+          "description": "Poisoning communication between multiple interacting AI agents."
+        },
+        {
+          "value": "ma-t002",
+          "expanded": "Response Relay Exploit",
+          "description": "Exploiting relay mechanisms between agents to leak or alter data."
+        },
+        {
+          "value": "ma-t003",
+          "expanded": "Agent Role Misassignment",
+          "description": "Tricking systems into assigning incorrect roles to AI agents."
+        }
+      ]
+    }
+  ]
+}
